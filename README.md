@@ -38,7 +38,8 @@ Falls du nur die **Tabellenstruktur** importieren möchtest:
 ```bash
 psql -U goncabi -d db_platten -f schema.sql
 
-🔍 Beispiel-SQL-Abfragen
+
+##🔍 Beispiel-SQL-Abfragen
 1️⃣ Standort einer bestimmten Platte abfragen
 
 SELECT a.standort, a.regal_nr, a.fach_nr
@@ -46,7 +47,7 @@ FROM platte p
 JOIN ablageort a ON p.ablageort_id = a.ablageort_id
 WHERE p.titel = 'The Amazing Nina Simone';
 
-2️⃣ Anzahl der Platten pro Genre ermitteln
+##2️⃣ Anzahl der Platten pro Genre ermitteln
 
 SELECT g.genre_name, COUNT(hg.platte_id) AS anzahl_platten
 FROM genre g
@@ -54,7 +55,7 @@ LEFT JOIN hat_genre hg ON g.genre_id = hg.genre_id
 GROUP BY g.genre_id, g.genre_name
 ORDER BY anzahl_platten DESC;
 
-3️⃣ Umsatz mit Platten von Nina Simone berechnen
+##3️⃣ Umsatz mit Platten von Nina Simone berechnen
 
 SELECT SUM(p.verkaufspreis - p.einkaufspreis) AS umsatz
 FROM platte p
@@ -62,7 +63,7 @@ JOIN interpretiert_von iv ON p.platte_id = iv.platte_id
 JOIN kuenstlerin k ON iv.kuenst_id = k.kuenst_id
 WHERE k.kuenst_name = 'Nina Simone' AND p.verkaufsdatum IS NOT NULL;
 
-🔐 Sicherheitskonzept
+##🔐 Sicherheitskonzept
 
 Benutzerrolle für allgemeine Nutzer:
 
@@ -72,14 +73,14 @@ sql
 
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO s0592799;
 
-📌 Erweiterungsideen
+##📌 Erweiterungsideen
 
 Umsatz-Views: Verkaufsübersicht mit Gewinn- und Trendanalysen.
 Kunden-Views: Anzeige von Verfügbarkeit, Preisen und Zustand der Platten.
 Historie: Preis- und Lagerverlauf zur Bestandsoptimierung.
 Externe Daten: Preistrends und Marktplatzintegration.
 
-📩 Kontakt
+##📩 Kontakt
 👤 Erstellt von: Gabriela Goncalvez, Maryam Mirza, Noa Sauter
 📧 E-Mail: gabriela.goncalvez@posteo.net
 🔗 GitHub Repo: GitHub - PlattenDB
