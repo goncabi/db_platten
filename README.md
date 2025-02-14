@@ -87,6 +87,6 @@ Externe Daten: Preistrends und Marktplatzintegration.
 
 🔗 GitHub Repo: GitHub - PlattenDB
 
-##**📝 Lizenz**
+## **📝 Lizenz**
 📄 Dieses Projekt steht unter der MIT-Lizenz.
 Weitere Informationen findest du in der LICENSE-Datei.
