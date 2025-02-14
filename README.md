@@ -82,7 +82,9 @@ Externe Daten: Preistrends und Marktplatzintegration.
 
 ## **📩 Kontakt**
 👤 Erstellt von: Gabriela Goncalvez, Maryam Mirza, Noa Sauter
+
 📧 E-Mail: 
+
 🔗 GitHub Repo: GitHub - PlattenDB
 
 ##**📝 Lizenz**
