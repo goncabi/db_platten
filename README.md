@@ -35,7 +35,7 @@ Mit einer wachsenden Plattensammlung wird es zunehmend schwieriger, den Überbli
 
 ### **2️⃣ Datenbank-Import**
 Falls du nur die **Tabellenstruktur** importieren möchtest:
-```bash
+
 psql -U goncabi -d db_platten -f schema.sql
 
 
